@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@1&display=swap');
+
+:root{
+
+   /* declarei no escopo global as variaveis */
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover:  #184311;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'monserrat', sans-serif;
+    
+
+
+}
+
+* {
+   margin:0;
+   padding:0;
+} 
+
+body {
+
+   /* Altura da nossa tela  igual a cem por cento da tela do nosso navegador. usei so no comeco depois que fiz o footer tirei*/
+      /* height: 100vh; */
+     
+     /* nada vai sair do body */
+      box-sizing: border-box;
+
+   /* cor de fundo */
+    background-color: var(--cor-primaria);
+
+    /* cor do texto */
+    color: var(--cor-secundaria);
+    
+}
+ .titulo-destaque {
+   color: aqua;
+}
+
+.cabecalho{
+
+   padding: 2% 0% 0% 15%;
+
+}
+
+.cabecalho__menu{
+
+   display: flex;
+   gap: 80px;
+}
+
+.cabecalho__menu__link{
+  
+   font-family:var(--fonte-secundaria);
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: var(--cor-terciaria);
+   
+   text-decoration: none;
+
+
+
+}
+
+/* man */
+.apresentacao{
+   /* margin:10% 15%;fiz no comeco , agora tirei */
+
+   /* agora que ja fiz o footer uasr esse */
+   padding: 5% 15%;
+   display:flex;
+   align-items: center;
+   justify-content: space-between; 
+   gap:82px;
+}
+
+.img-perfil {
+   width:40%;
+}
+.apresentacao__conteudo{
+
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+
+   /* dar espacamento */
+   gap: 40px;
+
+   
+}
+
+.apresentacao__conteudo__titulo{
+
+   font-size: 2.25rem;
+   font-family: var(--fonte-primaria)
+   
+
+}
+
+.titulo-destaque{
+   color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto {
+   font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   /* centralizar verticalmente */
+   align-items: center;
+  
+   /* dar espaço para baixo entre os botoes */
+  gap: 32px;
+
+
+}
+
+.apresentacao__links__subtitulo{
+   font-family: var(--fonte-primaria);
+   font-weight: 400;
+   font-size: 1.5rem;
+}
+
+   /* classe */
+.apresentacao__links__navegacao{
+
+   /* alinhar imagem e icone dos botoes utilizando flex box */
+   display: flex;
+
+   /* puxar o icone e o texto dos botoes pro centro */
+   justify-content: center;
+
+   /* dar um espaco entre o icone e o texto */
+   gap: 16px;
+
+/* cor botao */
+   /* background-color: #22D4FD;  
+   /* espessura da borda do botao */
+   border: 2px solid var(--cor-terciaria);
+
+
+   /* largura botao */
+   width: 50%;
+
+   /* centralizar texto botao */
+   text-align: center;
+
+   /* arredondamento da borda */
+   /* border-radius: 16px; */
+   /* trocou po radius*/
+   border-radius: 8px;
+
+   /* aumentar a fonte do texto do botao */
+   font-size: 1.5rem;
+   font-weight: 600;
+
+   /* aumentar a margem do botao vertical, horizontal */
+   padding: 21.5px 0;
+
+   /* tirar a linha debaixo do texto*/
+   text-decoration: none;
+
+   /* colocar cor no texto do botao */
+   /* color: #000000; */
+   color: var(--cor-secundaria);
+   font-family: var(--fonte-secundaria);
+
+}
+
+/* tudo que esta aqui dentro dessa classe, sera estilizado */
+.apresentacao__links__navegacao:hover{
+
+   /* quando o mause passar pelos botoes a cor muda */
+   background-color: var(--cor-hover);
+
+}
+
+.apresentacao__imagem{
+
+   width: 50%;
+}
+
+.rodape{
+
+   padding: 24px;
+   color: var(--cor-primaria);
+   background-color: var(--cor-terciaria);
+  text-align: center;
+  font-family:var(--fonte-secundaria);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (max-width:1200px) {
+   .cabecalho{
+     padding:10% ;
+
+    .cabecalho__menu{
+      justify-content: center;
+
+     }
+   }
+   .apresentacao{
+      flex-direction: column-reverse;
+      padding: 5%;
+   } 
+   .apresentacao__conteudo {
+      width:auto;
+   }
+}
+
+
+
+
